@@ -164,11 +164,39 @@ button:hover{
 }
 
 .Contenedor1{
+  
   width: 50%;
   height: 650px;
   margin: 20px;
   padding-left: 20px;
   overflow: hidden;
+  overflow-y: scroll;
+}
+
+.Contenedor1::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.Contenedor1::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+.Contenedor1::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.Contenedor1::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.Contenedor1::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.Contenedor1::-webkit-scrollbar-track {
+  border-radius: 10px;  
 }
 
 .Contenedor2{
@@ -353,3 +381,67 @@ a:hover{
 .espacio{
   margin-top: 10px;
 }
+
+.capa1{
+  filter: opacity(0.4) drop-shadow(0 0 0 rgb(247, 236, 136)); 
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+}
+
+.Contendor3{
+  width: 300px;
+  height: 650px;
+  margin: 20px;
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.Contenedor3{
+  padding-left: 30px;
+}
+
+.Contenedor4{
+  padding-left: 50px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.Contenedor5{
+  width: 300px;
+  height: 650px;
+  margin: 20px;
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.Contenedor4::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.Contenedor4::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+.Contenedor4::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.Contenedor4::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.Contenedor4::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.Contenedor4::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
+
