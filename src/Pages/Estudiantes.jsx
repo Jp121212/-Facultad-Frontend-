@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom'
 import Header from '../Components/Header';
 import '../Components/App.css'
+import  Accordion  from '../Components/Accordions';
+import Footer from '../Components/Footer';
 
 const Estudiantes = () => {
   const [Estudiante, setEstudiante] = React.useState(null);
@@ -26,41 +28,11 @@ const Estudiantes = () => {
     setEstudianteActivo(Estudiante.find((el) => el.id === id));
   }
 
-  const agregarFavorito = () => {
-    // console.log(localStorage.getItem('favoritos'))
-    if(!localStorage.getItem('favoritos')){
-      // case, no existe aun
-      let data = JSON.stringify([EstudianteActivo]);
-      localStorage.setItem('favoritos', data)
-      setFavoritos([EstudianteActivo]);
-    } else{
-      // patron inmutable de actualizar un array
-      let data = JSON.parse(localStorage.getItem('favoritos'))
-      let newData = JSON.stringify([...data, EstudianteActivo]);
-      localStorage.setItem('favoritos', newData)
-      let tempFavoritos = [...favoritos, EstudianteActivo];
-      setFavoritos(tempFavoritos);
-    }
-  }
-
-  const eliminarFavorito = (id) => {
-    console.log({id})
-    let temp_favoritos = [...favoritos]
-    let nuevos_favoritos = temp_favoritos.filter((el) => el.id !== id);
-    console.log(nuevos_favoritos);
-    localStorage.setItem('favoritos', JSON.stringify(nuevos_favoritos))
-    setFavoritos(nuevos_favoritos)
-  }
   
-  const esFav = (id) => {
-    let exists = ((el) => el.id === id);
-    if(exists.length > 0){
-      return true
-    } else{
-      return false
-    }
-  }
 
+  
+  
+  
 
 
 
@@ -70,52 +42,44 @@ const Estudiantes = () => {
   return(
     <div className='.mainDiv'>
         <Header/>
-    <div>
-      <Titulo1>Estudiantes</Titulo1>
-      <ul>
-        {
-          Estudiante ? 
-            Estudiante.map((el, i) => <div>
-              <li key={i} onClick={() => manejarClickLista(el.id)} style={{
-              cursor: 'pointer'
-            }}>{el.primer_nombre} {el.primer_apellido}</li> 
-      
-              </div>) : 
-          'Loading...'
-        }
-      </ul>
+        <div className='raya'></div>     
+        <div className='banner1'>
+          <img className='capa' src='https://unadeca.ac.cr/home/wp-content/uploads/2021/02/DSC04815.jpg'></img>
+        </div>
 
-      {
-        EstudianteActivo &&
-        <div>
-        <p>Nombre: {EstudianteActivo.primer_nombre}</p>
-        <p>Apellido: {EstudianteActivo.primer_apellido}</p>
-        <p>Pais: {EstudianteActivo.pais_origen}</p>  
-        <p>Edad: {EstudianteActivo.edad}</p>
-        <p>Carrera: {EstudianteActivo.carrera}</p>
-        <p>Numero de Facultad: {EstudianteActivo.facultad_id}</p>
-        <button onClick={agregarFavorito}> ✰</button>
-      </div>
-      }
-      <hr />
-      <h2>Mis favoritos</h2>
-      <ul>
-        {
-          favoritos ? 
-            favoritos.map((el, i) => <div key={i}>
-            <li 
-              style={{
-                cursor: 'pointer'
-              }}
-              onClick={() => eliminarFavorito(el.id)}
-            >{el.primer_nombre ? el.primer_nombre : "No hay Fa"}</li>
-            <button onClick={() => eliminarFavorito(el.id)}>🗑</button>
-            </div>) : 
-          'Loading...'
-        }
-      </ul>
-      <Outlet />
-    </div>
+
+        <div className='Contendor'>
+          <div className='Contenedor1'>
+            <h1 className='h10'>Nos encargamos de hacerte un buen profesional</h1>
+            <hr></hr>
+            <p>
+            La UNADECA ofrece una amplia gama de carreras de grado para cubrir la demanda de profesionales de la sociedad costarricense y ofrece a las y los estudiantes una formación académica, investigativa y humanista en cada una de sus diferentes escuelas. La Institución ofrece opciones de pregrados (Programas de Diplomado y Certificados de Especialización en Programas Especiales) e imparte más de un centenar de carreras de grado avaladas por el Centro de Evaluación Académica.
+            </p>
+            <h1 className='h10'>Tenemos ofertas para vos</h1>
+            <hr></hr>
+            <p>El Club de Emprendedores Universitarios, consiste en un programa de educación continua a través del Colportaje Estudiantil. Mediante el cual los jóvenes se inscriben como misioneros, evangelistas de las publicaciones, y reciben capacitación, entrenamiento y asistencia para convertirse en Colportores estudiantes exitosos, capaces de financiar total y parcialmente su proyecto educativo en cualquiera de las carreras universitarias y así cumplir el sueño de sus vidas.  </p>
+          </div> 
+          <div className='Contenedor1'>
+            <h1 className='h11'>Lista de Estudiantes</h1>
+            {
+            Estudiante ?
+            Estudiante.map((u,i)=>{ 
+              return(
+                <div key={i}>
+                  <Accordion pop={u}/>
+                </div>
+              ) 
+
+            }): 'Loading...'
+          }
+          </div>
+        </div>
+        <Footer></Footer>
+
+
+
+
+   
     </div>
   );
 }
