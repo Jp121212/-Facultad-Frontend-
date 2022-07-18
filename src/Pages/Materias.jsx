@@ -4,6 +4,9 @@ import axios from 'axios';
 import {
   Outlet
 } from 'react-router-dom'
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
+import Accordion2 from '../Components/Accordion2';
 
 const Materias = () => {
   const [Materia, setMateria] = React.useState(null);
@@ -23,91 +26,53 @@ const Materias = () => {
     setMateriaActiva(Materia.find((el) => el.id === id));
   }
 
-  const agregarFavorito = () => {
-    // console.log(localStorage.getItem('favoritos'))
-    if(!localStorage.getItem('favoritos')){
-      // case, no existe aun
-      let data = JSON.stringify([MateriaActiva]);
-      localStorage.setItem('favoritos', data)
-      setFavoritos([MateriaActiva]);
-    } else{
-      // patron inmutable de actualizar un array
-      let data = JSON.parse(localStorage.getItem('favoritos'))
-      let newData = JSON.stringify([...data, MateriaActiva]);
-      localStorage.setItem('favoritos', newData)
-      let tempFavoritos = [...favoritos, MateriaActiva];
-      setFavoritos(tempFavoritos);
-    }
-  }
-
-  const eliminarFavorito = (id) => {
-    console.log({id})
-    let temp_favoritos = [...favoritos]
-    let nuevos_favoritos = temp_favoritos.filter((el) => el.id !== id);
-    console.log(nuevos_favoritos);
-    localStorage.setItem('favoritos', JSON.stringify(nuevos_favoritos))
-    setFavoritos(nuevos_favoritos)
-  }
-  
-  const esFav = (id) => {
-    let exists = ((el) => el.id === id);
-    if(exists.length > 0){
-      return true
-    } else{
-      return false
-    }
-  }
-
-
-
-
-
-  
-  console.log({favoritos})
   return(
+    <div className='.mainDiv'>
+        <Header/>
+        <div className='raya'></div>
+        <div className='banner13'>
+        
+          <img className='capa3' src='https://unadeca.ac.cr/home/wp-content/uploads/2018/08/Ingenieria_UNADECA.jpg'></img>
+          <div className='baninfo'>
+            <h1 className='h7'>Porque Somos confianza</h1>
+              <p>Empieza hoy mismo tu matricula con un curso adaptado a tus especiales contamos con una carga academica de un total de 18 creditos, no pienses mas y matriculate</p>
+                <button className="button4">Agenda tu cita</button>
+          </div>
+          
+        </div>
     <div>
-      <Titulo>Materias</Titulo>
-      <ul>
-        {
-          Materia ? 
-            Materia.map((el, i) => <div>
-              <li key={i} onClick={() => manejarClickLista(el.id)} style={{
-              cursor: 'pointer'
-            }}>{el.nombre}</li> 
-      
-              </div>) : 
-          'Loading...'
-        }
-      </ul>
+      <div className='Contendor'>
+         <div className='Contenedor1'>
+          <h1 className='h11'>Lista de Materias</h1>
+            {
+            Materia ?
+            Materia.map((u,i)=>{ 
+              return(
+                <div key={i}>
+                  <Accordion2 pop={u}/> 
+                </div>
+              ) 
 
-      {
-        MateriaActiva &&
-        <div>
-          <p>Nombre: {MateriaActiva.nombre}</p>
-          <p>Carrera: {MateriaActiva.carrera}</p>
-          <p>Creditos: {MateriaActiva.creditos}</p>
-          <p>Codigo: {MateriaActiva.codigo}</p>
-        <button onClick={agregarFavorito}> ✰</button>
+            }): 'Loading...'
+          }
+           </div> 
+           <div className='Contenedor1'>
+           <div className='Contenedor4'>
+            <h1 className='h10'>Nos encargamos de hacerte un buen profesional</h1>
+            <hr></hr>
+            <p>
+            La UNADECA ofrece una amplia gama de carreras de grado para cubrir la demanda de profesionales de la sociedad costarricense y ofrece a las y los estudiantes una formación académica, investigativa y humanista en cada una de sus diferentes escuelas. La Institución ofrece opciones de pregrados (Programas de Diplomado y Certificados de Especialización en Programas Especiales) e imparte más de un centenar de carreras de grado avaladas por el Centro de Evaluación Académica.
+            </p>
+            <h1 className='h10'>Tenemos ofertas para vos</h1>
+            <hr></hr>
+            <p>El Club de Emprendedores Universitarios, consiste en un programa de educación continua a través del Colportaje Estudiantil. Mediante el cual los jóvenes se inscriben como misioneros, evangelistas de las publicaciones, y reciben capacitación, entrenamiento y asistencia para convertirse en Colportores estudiantes exitosos, capaces de financiar total y parcialmente su proyecto educativo en cualquiera de las carreras universitarias y así cumplir el sueño de sus vidas.  </p>
+              </div>
+
+           </div>
       </div>
-      }
-      <hr />
-      <h2>Mis favoritos</h2>
-      <ul>
-        {
-          favoritos ? 
-            favoritos.map((el, i) => <div key={i}>
-            <li 
-              style={{
-                cursor: 'pointer'
-              }}
-              onClick={() => eliminarFavorito(el.id)}
-            >{el.nombre ? el.nombre : "No hay Fav"}</li>
-            <button onClick={() => eliminarFavorito(el.id)}>🗑</button>
-            </div>) : 
-          'Loading...'
-        }
-      </ul>
-      <Outlet />
+   
+    </div>
+    <Footer></Footer>
     </div>
   );
 }
