@@ -21,6 +21,21 @@ const Estudiante = () => {
         <div>
           <p>Nombre: {EstudianteActual.primer_nombre}</p>
           <p>Apellido: {EstudianteActual.primer_apellido}</p>
+          <p>Pais: {EstudianteActual.pais_origen}</p>  
+          <p>Edad: {EstudianteActual.edad}</p>
+          <p>Carrera: {EstudianteActual.carrera}</p>
+          <p>Numero de Facultad: {EstudianteActual.facultad_id}</p>
+          <p>Deuda Ciclo: {EstudianteActual.deuda_ciclo_actual}</p>
+          <p>Moroso: {EstudianteActual.es_moroso}</p>
+          <p>ID de Materias:
+          <ul>
+            {
+              EstudianteActual.materias.map((el) => <div>
+                <li>{el.materia_id}</li>
+              </div>)
+              }
+          </ul>
+            </p>          
         </div>
         : 'Loading...'
       }

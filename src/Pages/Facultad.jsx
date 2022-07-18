@@ -22,6 +22,30 @@ const Facultad = () => {
           <p>Nombre: {FacultadActual.nombre}</p>
           <p>Nombre Decano: {FacultadActual.nombre_decano}</p>
           <p>Abreviacion: {FacultadActual.Abreviacion}</p>
+          <p>Estudiantes:</p>
+          <ul>
+            {
+              FacultadActual.estudiants.map((el) => <div>
+                <li>{el.primer_nombre} {el.primer_apellido}</li>
+              </div>)
+              }
+          </ul>
+          <p>Materias:</p>
+          <ul>
+            {
+              FacultadActual.materias.map((el) => <div>
+                <li>{el.nombre}</li>
+              </div>)
+            }
+          </ul>
+          <p>Profesores:</p>
+          <ul>
+            {
+              FacultadActual.profesores.map((el) => <div>
+                <li>{el.nombre} {el.apellido}</li>
+              </div>)
+            }
+           </ul>   
         </div>
         : 'Loading...'
       }

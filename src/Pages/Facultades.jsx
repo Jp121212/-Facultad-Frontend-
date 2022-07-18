@@ -66,7 +66,7 @@ const Facultades = () => {
   console.log({favoritos})
   return(
     <div>
-      <Titulo>Lista de equipo!</Titulo>
+      <Titulo>Facultades</Titulo>
       <ul>
         {
           Facultad ? 
@@ -86,7 +86,7 @@ const Facultades = () => {
         <p>Nombre: {FacultadActiva.nombre}</p>
         <p>Decano: {FacultadActiva.nombre_decano}</p>
         <p>Abreviacion: {FacultadActiva.Abreviacion}</p>
-      
+        <button onClick={agregarFavorito}> ✰</button>
       </div>
       }
       <hr />

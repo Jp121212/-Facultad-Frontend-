@@ -1,5 +1,5 @@
 import React from 'react';
-import Titulo from '../Components/Titulo';
+import Titulo1 from '../Components/Titulo';
 import axios from 'axios';
 import {
   Outlet
@@ -15,6 +15,7 @@ const Estudiantes = () => {
       axios.get(`https://jp-bd.herokuapp.com/estudiante`)
         .then((res) => {
           setEstudiante(res.data)
+          console.log(res.data)
         })
     }
   }, [])
@@ -66,7 +67,7 @@ const Estudiantes = () => {
   console.log({favoritos})
   return(
     <div>
-      <Titulo>Lista de equipo!</Titulo>
+      <Titulo1>Estudiantes</Titulo1>
       <ul>
         {
           Estudiante ? 
@@ -85,8 +86,11 @@ const Estudiantes = () => {
         <div>
         <p>Nombre: {EstudianteActivo.primer_nombre}</p>
         <p>Apellido: {EstudianteActivo.primer_apellido}</p>
-       
-      
+        <p>Pais: {EstudianteActivo.pais_origen}</p>  
+        <p>Edad: {EstudianteActivo.edad}</p>
+        <p>Carrera: {EstudianteActivo.carrera}</p>
+        <p>Numero de Facultad: {EstudianteActivo.facultad_id}</p>
+        <button onClick={agregarFavorito}> ✰</button>
       </div>
       }
       <hr />
