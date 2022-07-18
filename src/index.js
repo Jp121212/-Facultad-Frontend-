@@ -5,6 +5,12 @@ import App from './Pages/App';
 import reportWebVitals from './reportWebVitals';
 import Facultades from './Pages/Facultades';
 import Facultad from './Pages/Facultad';
+import Estudiante from './Pages/Estudiante';
+import Estudiantes from './Pages/Estudiantes';
+import Profesores from './Pages/Profesores';
+import Profesor from './Pages/Profesor';
+import Materia from './Pages/Materia';
+import Materias from './Pages/Materias';
 
 import {
   BrowserRouter,
@@ -20,8 +26,12 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="facultades" element={<Facultades/>} />
       <Route path='facultades/:idFacultad' element={<Facultad/>}></Route>
-      
-      <Route ></Route>
+      <Route path='estudiantes' element={<Estudiantes/>}></Route>
+      <Route path='estudiantes/:idEstudiante' element={<Estudiante/>}></Route>
+      <Route path='profesores' element={<Profesores/>}></Route>
+      <Route path='profesores/:idProfesor' element={<Profesor/>}></Route>
+      <Route path='materias' element={<Materias/>}></Route>
+      <Route path='materias/:idMateria' element={<Materia/>}></Route>
     </Routes>
   </BrowserRouter>
 );

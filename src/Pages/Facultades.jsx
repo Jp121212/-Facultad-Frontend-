@@ -48,6 +48,16 @@ const Facultades = () => {
     localStorage.setItem('favoritos', JSON.stringify(nuevos_favoritos))
     setFavoritos(nuevos_favoritos)
   }
+  
+  const esFav = (id) => {
+    let exists = ((el) => el.id === id);
+    if(exists.length > 0){
+      return true
+    } else{
+      return false
+    }
+  }
+
 
 
 
@@ -63,7 +73,7 @@ const Facultades = () => {
             Facultad.map((el, i) => <div>
               <li key={i} onClick={() => manejarClickLista(el.id)} style={{
               cursor: 'pointer'
-            }}>{el.nombre}</li>
+            }}>{el.nombre}</li> 
       
               </div>) : 
           'Loading...'
@@ -90,7 +100,7 @@ const Facultades = () => {
                 cursor: 'pointer'
               }}
               onClick={() => eliminarFavorito(el.id)}
-            >{el.nombre}</li>
+            >{el.nombre ? el.nombre : "No hay Fa"}</li>
             <button onClick={() => eliminarFavorito(el.id)}>🗑</button>
             </div>) : 
           'Loading...'
