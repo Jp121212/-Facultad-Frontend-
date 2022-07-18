@@ -66,7 +66,7 @@ const Materias = () => {
   console.log({favoritos})
   return(
     <div>
-      <Titulo>Facultades</Titulo>
+      <Titulo>Materias</Titulo>
       <ul>
         {
           Materia ? 
@@ -101,7 +101,7 @@ const Materias = () => {
                 cursor: 'pointer'
               }}
               onClick={() => eliminarFavorito(el.id)}
-            >{el.nombre ? el.nombre : "No hay Fa"}</li>
+            >{el.nombre ? el.nombre : "No hay Fav"}</li>
             <button onClick={() => eliminarFavorito(el.id)}>🗑</button>
             </div>) : 
           'Loading...'
