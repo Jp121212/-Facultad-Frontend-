@@ -4,6 +4,8 @@ import axios from 'axios';
 import {
   Outlet
 } from 'react-router-dom'
+import Header from '../Components/Header';
+import '../Components/App.css'
 
 const Estudiantes = () => {
   const [Estudiante, setEstudiante] = React.useState(null);
@@ -66,6 +68,8 @@ const Estudiantes = () => {
   
   console.log({favoritos})
   return(
+    <div className='.mainDiv'>
+        <Header/>
     <div>
       <Titulo1>Estudiantes</Titulo1>
       <ul>
@@ -111,6 +115,7 @@ const Estudiantes = () => {
         }
       </ul>
       <Outlet />
+    </div>
     </div>
   );
 }

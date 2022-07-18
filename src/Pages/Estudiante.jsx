@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams  } from 'react-router-dom';
 import axios from 'axios';
+import Header from '../Components/Header';
+import '../Components/App.css';
 
 const Estudiante = () => {
   const [EstudianteActual, setEstudiante] = useState(null);
@@ -15,7 +17,9 @@ const Estudiante = () => {
   }, [])
   console.log(EstudianteActual)
   return(
-    <div>
+    <div className='.mainDiv'>
+        <Header/>
+       <div>
       {
         EstudianteActual ?
         <div>
@@ -39,7 +43,9 @@ const Estudiante = () => {
         </div>
         : 'Loading...'
       }
+    </div> 
     </div>
+    
   )
 }
 export default Estudiante;
