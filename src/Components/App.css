@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 body{
-  background-color: #e5e7e8
+  background-color: #dddddd
  } 
 
  .header{
@@ -121,6 +121,12 @@ button:hover{
 
 .h7{
   color: #c5981b;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  font-size: 45px;
+}
+.h0{
+  color: #1e3260;
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   font-size: 45px;
@@ -374,6 +380,7 @@ a:hover{
   text-align: center;
 }
 
+
 .capa{
   filter: opacity(0.4) drop-shadow(0 0 0 rgb(1, 24, 233)); 
 }
@@ -475,4 +482,66 @@ a:hover{
   height: 500px;
   background: #ffffff;
   display: flex;
+}
+
+.ban11{
+  float: right;
+  height: auto;
+  left: 0px;
+  background-size: cover;
+  height:100%;
+  width: 45% ;
+  text-align: center;
+  overflow: hidden;
+  filter: opacity(0.4) drop-shadow(0 0 0 rgb(1, 26, 253)); 
+}
+
+.img8{
+  width: 900px;
+  height: 650px;
+  background-size: cover;
+  text-align: center;
+}
+
+.Contenedor8{
+  width: 58%;
+  height: 650px;
+  margin: 20px;
+  padding-left: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.Contenedor9{
+  width: 65%;
+  height: 710px;
+  margin: 20px;
+  padding-left: 20px;
+  overflow: hidden;
+
+}
+
+.Contenedor8::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.Contenedor8::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+.Contenedor8::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.Contenedor8::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.Contenedor8::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.Contenedor8::-webkit-scrollbar-track {
+  border-radius: 10px;  
 }
