@@ -13,7 +13,7 @@ export default function SimpleAccordion(props) {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header" 
-        > <img className='img6'src="https://c0.klipartz.com/pngpicture/1016/75/gratis-png-ilustracion-del-icono-humano-azul-tres-reunion-junta-directiva-icono-de-gestion-de-agenda-gente-de-negocios-azul-ppt.png"></img>
+        > <img className='img6'src="https://cdn-icons-png.flaticon.com/512/5352/5352118.png"></img>
           <Typography color='#c5981b' marginLeft={1}> {props.pop.nombre}</Typography>
         </AccordionSummary>
         <AccordionDetails className='espacio'>

@@ -12,7 +12,7 @@ const Header = () => {
     <Box className='header'>
       <AppBar  position="static">
         <Toolbar className='header' >
-            <img className="img2" src="https://unadeca.ac.cr/moodle/pluginfile.php/1/theme_lambda/logo/1603473903/Unadeca_Manual_Web-5.png">
+            <img className="img2" src="https://estudiacostarica.com/wp-content/uploads/2023/10/Logo-de-UNADECA.png">
             </img>
             <div className='juntar'>
               <h1 className='h3'>UNADECA</h1>
@@ -20,10 +20,10 @@ const Header = () => {
             </div>
             <div className='juntar1'>
               <a href='Facultades' className='button'>Facultades</a>
-              <a href='Materias' className='button1'>Materias</a>
-              <a href='Profesores'className='button1'>Profesores</a>
-              <a href='Estudiantes'className='button1'>Estudiantes</a>
-              <a href='/' className='button1'>Inicio</a>
+              <a href='Materias' className='buttons'>Materias</a>
+              <a href='Profesores'className='buttons'>Profesores</a>
+              <a href='Estudiantes'className='buttons'>Estudiantes</a>
+              <a href='/' className='buttons'>Inicio</a>
             </div>
             
             

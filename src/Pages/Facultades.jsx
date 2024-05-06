@@ -15,7 +15,7 @@ const Facultades = () => {
 
   React.useEffect(() => {
     if(!Facultad){
-      axios.get(`https://jp-bd.herokuapp.com/facultad`)
+      axios.get(`http://localhost:5000/facultad`)
         .then((res) => {
           setFacultad(res.data)
         })
@@ -43,6 +43,7 @@ const Facultades = () => {
         <div className='banner1'>
           <img className='capa1' src='https://unadeca.ac.cr/home/wp-content/uploads/2018/08/MG_2169.jpg'></img>
         </div>
+        <div className='raya'></div>
         <div className='Contendor'>
           <div className='Contenedor4'>
           <h1 className='h11'>Lista de Facultades</h1>

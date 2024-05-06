@@ -16,7 +16,7 @@ const Estudiantes = () => {
 
   React.useEffect(() => {
     if(!Estudiante){
-      axios.get(`https://jp-bd.herokuapp.com/estudiante`)
+      axios.get(`http://localhost:5000/estudiante`)
         .then((res) => {
           setEstudiante(res.data)
           console.log(res.data)
@@ -44,10 +44,10 @@ const Estudiantes = () => {
         <Header/>
         <div className='raya'></div>     
         <div className='banner1'>
-          <img className='capa' src='https://unadeca.ac.cr/home/wp-content/uploads/2021/02/DSC04815.jpg'></img>
+          <img className='' src='https://unadeca.ac.cr/home/wp-content/uploads/2021/02/DSC04815.jpg'></img>
         </div>
 
-
+        <div className='raya'></div>     
         <div className='Contendor'>
           <div className='Contenedor1'>
             <h1 className='h10'>Nos encargamos de hacerte un buen profesional</h1>

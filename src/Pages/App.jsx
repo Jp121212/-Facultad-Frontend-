@@ -16,9 +16,10 @@ const App = () => {
               <p>Empieza hoy mismo con tu carrera y cumple tus sueños de ser un profesional, desde
                 precios muy cómodos y accesibles y además de contar con profesores de clase alta
                 y galardonados en su área, No esperes más y matricúlate ya!</p>
-                <button className="buttoninfo">Matriculate ya!</button>
+                <button className="buttoninfo2">Matriculate ya!</button>
             </div>
     </div>
+    <div className='raya'></div>     
     <div className='Contendor'>
       <div className='Contenedor1'>
         <div className='contacto'>

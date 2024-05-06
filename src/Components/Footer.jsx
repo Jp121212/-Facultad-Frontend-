@@ -12,7 +12,6 @@ export default function Footer() {
     
         >
         <Box textAlign="center" padding="50px" >
-            <img className="img3" src="https://unadeca.ac.cr/moodle/pluginfile.php/1/theme_lambda/logo/1603473903/Unadeca_Manual_Web-5.png"></img>
         </Box>
      <Box textAlign="center" padding="0px" margin="0px" >
             Universidad Adventista de CentroAmerica &reg; {new Date().getFullYear()}<br></br>

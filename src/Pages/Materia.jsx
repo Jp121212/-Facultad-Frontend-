@@ -8,7 +8,7 @@ const Materias = () => {
   let { idMateria } = useParams();
   useEffect(() => {
     if(!MateriaActual){
-      axios.get(`https://jp-bd.herokuapp.com/materias/${idMateria}`)
+      axios.get(`http://localhost:5000/materias/${idMateria}`)
         .then((res) => {
           setMateria(res.data)
         })
@@ -18,9 +18,7 @@ const Materias = () => {
   return(
     <div className='.mainDiv'>
         <Header/>
-        <div className='banner1'>
-          <img className='capa2' src='https://unadeca.ac.cr/home/wp-content/uploads/2018/06/UNADECA_Prueba_Texto-5-2.jpg'></img>
-        </div>
+        <div className='raya'></div>
         <div className='Contendor'>
           
            <div className='Contenedor1'>

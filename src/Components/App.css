@@ -1,20 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-body{
-  background-color: #dddddd
- } 
+
 
  .header{
- 
-  font-size: 20px;
   background-color: #ffffff;
 
   
 }
 .juntar1{
  
-  margin: 0,0,0,0;
-  padding: 1px;
-  width: 100%;
+  margin: 0,0,0,0;  width: 100%;
+  
   display: flex;
   flex-direction: row-reverse;
   
@@ -62,26 +57,27 @@ body{
   text-align: center;
   display: inline-block;;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
   margin: 4px 2px;
   border-radius: 8px;
   margin-left: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.button1{
-  background-color: #ffffff;
+.buttons:hover{
+  color: #e5e7e8;
+}
+.buttons{
+    background-color: #ffffff;
     font-weight: lighter;
-    border: none;
     color: #1e3260;
+    border-radius: 8px;
     padding: 30px;
     text-align: center;
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
-    font-size: 18px;
-    border-radius: 10px;
-    margin-left: 20px;
+    font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -93,8 +89,9 @@ button:hover{
     overflow: hidden;
     margin-top:1px;
     background-size: cover;
-    height: 560px;
-    background: #ffffff;
+    height: 560px;    
+    background-color: #1e3260;
+    color: #ffffff;
 }
 
 .ban{
@@ -106,6 +103,7 @@ button:hover{
     width: 45% ;
     text-align: center;
     overflow: hidden;
+
 }
 
 .baninfo{
@@ -114,7 +112,6 @@ button:hover{
   padding-top: 90px; 
   text-align: left;
   padding-left: 60px;
-  color: #000000;
   font-size: 17px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -146,6 +143,20 @@ button:hover{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.buttoninfo2{
+  background-color: #c5981b;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 40px 2px;
+  border-radius: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .raya{
   border-bottom: 4px solid #c5981b;
 }
@@ -153,7 +164,7 @@ button:hover{
 .footer{
   margin-top: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  height:300px;
+  height:200px;
 }
 
 .Contendor{
@@ -161,6 +172,7 @@ button:hover{
   width: 100%;
   height: 700px;
   display: flex;
+  background-color: white;
 }
 
 .img3{
@@ -343,11 +355,12 @@ a:hover{
 
 
 .banner1{
+  color: #e5e7e8;
   overflow: hidden;
   margin-top:1px;
   background-size: cover;
   height: 500px;
-  background: #ffffff;
+  background: #1e3260;
 }
 
 .cuadro{
@@ -411,7 +424,7 @@ a:hover{
 
 .Contenedor4{
   padding-left: 50px;
-  width: 100%;
+  width: 70%;
   height: 100%;
   overflow: hidden;
   overflow-y: scroll;
@@ -480,7 +493,8 @@ a:hover{
   margin-top:1px;
   background-size: cover;
   height: 500px;
-  background: #ffffff;
+  background: #1e3260;
+  color: #e5e7e8;
   display: flex;
 }
 

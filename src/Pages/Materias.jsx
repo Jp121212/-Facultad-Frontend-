@@ -15,7 +15,7 @@ const Materias = () => {
 
   React.useEffect(() => {
     if(!Materia){
-      axios.get(`https://jp-bd.herokuapp.com/Materia`)
+      axios.get(`http://localhost:5000/Materia`)
         .then((res) => {
           setMateria(res.data)
         })
@@ -38,8 +38,8 @@ const Materias = () => {
               <p>Empieza hoy mismo tu matricula con un curso adaptado a tus especiales contamos con una carga academica de un total de 18 creditos, no pienses mas y matriculate</p>
                 <button className="button4">Agenda tu cita</button>
           </div>
-          
         </div>
+        <div className='raya'></div>
     <div>
       <div className='Contendor'>
          <div className='Contenedor1'>
